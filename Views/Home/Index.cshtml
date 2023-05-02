@@ -1,0 +1,186 @@
+﻿@{
+    ViewData["Title"] = "Su's C & T";
+}
+@model List<MyDrinks>
+
+
+<body>
+    <style>
+        .row {
+           
+            border-style: solid;
+        }
+        .i{
+            border-style:double;
+        }
+
+        
+    </style>
+    <div class="text-center">
+        <h1 class="display-4" style="font-family:papyrus;">Su's Coffee & Tea Stop</h1>
+    </div>
+
+    @{
+        void RenderDrinks(List<MyDrinks> Drinkss, string Type)
+        {
+
+            @if (Type == "Ube")
+            {
+                <br id="section-1" />
+                <h2 style="font-family:papyrus;">@Type Series</h2>
+
+                <div class="row" style="background-color:lavender">
+
+
+                    @foreach (var Drinks in Drinkss)
+                    {
+                        @if (@Drinks.Type == Type)
+                        {
+                            <div class="col-sm col-lg ">
+                                <p style="color:grey">@Drinks.Description</p>
+                                <p style="color:grey">@Drinks.Ingredients</p>
+
+                                <img class="i" src=@Drinks.Image width="450" height="350">
+                                <br />
+                                <br />
+                                <h5 style="font-family:papyrus;">@Drinks.Name</h5>
+
+                                <br />
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            }
+            <br />
+            @if (Type == "Cold Foam")
+            {
+                <br id="section-2" />
+                <h2 style="font-family:papyrus;">@Type Series</h2>
+
+                <div class="row" style="background-color:tan">
+
+
+                    @foreach (var Drinks in Drinkss)
+                    {
+                        @if (@Drinks.Type == Type)
+                        {
+                            <div class="col-sm col-lg ">
+                                <p style="color:grey">@Drinks.Description</p>
+                                <p style="color:grey">@Drinks.Ingredients</p>
+
+                                <img class="i" src=@Drinks.Image width="450" height="350">
+                                <br />
+                                <br />
+                                <h5 style="font-family:papyrus;">@Drinks.Name</h5>
+
+                                <br />
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            }
+            <br />
+            @if (Type == "Lemonade")
+            {
+                <br id="section-3" />
+                <h2 style="font-family:papyrus;">@Type Series</h2>
+
+                <div class="row" style="background-color: lightgoldenrodyellow">
+
+
+                    @foreach (var Drinks in Drinkss)
+                    {
+                        @if (@Drinks.Type == Type)
+                        {
+                            <div class="col-sm col-lg ">
+                                <p style="color:grey">@Drinks.Description</p>
+                                <p style="color:grey">@Drinks.Ingredients</p>
+
+                                <img class="i" src=@Drinks.Image width="450" height="350">
+                                <br />
+                                <br />
+                                <h5 style="font-family:papyrus;">@Drinks.Name</h5>
+
+                                <br />
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            }
+            <br />
+            @if (Type == "Iced Coffee")
+            {
+                <br id="section-4" />
+                <h2 style="font-family:papyrus;">@Type Series</h2>
+
+                <div class="row" style="background-color:beige">
+
+
+                    @foreach (var Drinks in Drinkss)
+                    {
+                        @if (@Drinks.Type == Type)
+                        {
+                            <div class="col-sm col-lg ">
+                                <p style="color:grey">@Drinks.Description</p>
+                                <p style="color:grey">@Drinks.Ingredients</p>
+
+                                <img class="i" src=@Drinks.Image width="450" height="350">
+                                <br />
+                                <br />
+                                <h5 style="font-family:papyrus;">@Drinks.Name</h5>
+
+                                <br />
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            }
+            <br />
+            @if (Type == "Tea")
+            {
+                <br id="section-5" />
+                <h2 style="font-family:papyrus;" >@Type Series</h2>
+
+
+                <div class="row" style="background-color: #FFDFB6 ">
+
+
+                    @foreach (var Drinks in Drinkss)
+                    {
+                        @if (@Drinks.Type == Type)
+                        {
+                            <div class="col-sm col-lg ">
+                                <p style="color:grey">@Drinks.Description</p>
+                                <p style="color:grey">@Drinks.Ingredients</p>
+
+                                <img class="i" src=@Drinks.Image width="450" height="350">
+                                <br />
+                                <br />
+                                <h5 style="font-family:papyrus;">@Drinks.Name</h5>
+
+                                <br />
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            }
+        }
+        RenderDrinks(Model, "Ube");
+        RenderDrinks(Model, "Cold Foam");
+        RenderDrinks(Model, "Lemonade");
+        RenderDrinks(Model, "Iced Coffee");
+        RenderDrinks(Model, "Tea");
+
+    }
+
+</body>
