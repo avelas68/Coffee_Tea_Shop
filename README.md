@@ -1,1 +1,2 @@
 # Coffee_Tea_Shop
+Using Asp.net Core Entity Framework I made a coffee shop website that displays a wide variety of beverages. I stored the drinks' description, ingredients, and image pathway onto the Azure database. Furthemore, I was able to store all the data from the database onto a list from the Visual Studio IDE.In addition, I was able to call certain objects from the list and have them be presented onto the menu page of the Coffee and Tea Website.
